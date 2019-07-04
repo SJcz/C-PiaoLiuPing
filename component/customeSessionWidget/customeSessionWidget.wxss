@@ -1,0 +1,50 @@
+/* component/customeSessionWidget.wxss */
+.session-view {
+  display: flex;
+  flex-direction: rows;
+  justify-content: flex-start;
+  background-color: #eee;
+  padding: 20rpx 20rpx 60rpx 20rpx;
+  align-items: center; /*项目在行中居中对齐， 不然会出现图片和中间view对不齐情况*/
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid rgb(158, 158, 158);
+}
+
+.middle-view{
+  width: 100%;
+  margin: 0 20rpx;
+  border: 1px solid rgb(158, 158, 158);
+  padding: 15rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  background-color: #fff;
+}
+
+.iconImage {
+  width: 60rpx;
+  height: 50rpx;
+}
+
+.voice-tip {
+  position: fixed;
+  width: 300rpx;
+  height: 250rpx;
+  left: 50%;
+  margin-left: -150rpx;
+  top: 40%;
+  margin-top: -150rpx;
+  background-color: #555151;
+  color: #fff;
+  text-align: center;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  font-size: 30rpx;
+}
+
+.voice-tip image{
+  width: 150rpx;
+  height: 170rpx;
+}

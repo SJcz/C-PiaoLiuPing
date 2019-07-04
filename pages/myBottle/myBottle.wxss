@@ -1,0 +1,71 @@
+/* pages/piaoliuping/myBottle/myBottle.wxss */
+page{
+  background-color: #eee;
+}
+
+.bottle-list-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #ccc;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.content-part{
+  width: 100%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-left: 20rpx;
+  line-height: 50rpx;
+  margin-right: 0;
+  transition: all 0.4s;
+  transform: translateX(180rpx);
+  margin-left: -180rpx;
+}
+/*用户头像*/
+.cell-profile-image{
+  height:100rpx;
+  width:100rpx;
+  border-radius:10rpx;
+}
+
+.inline-block-view{
+  display:inline-block;
+  vertical-align: top;
+  margin-left: 25rpx;
+}
+/*用户名字*/  
+.cell-user-name {
+  font-size:30rpx;
+  color: #000;
+}
+/*信息内容*/
+.cell-content{
+  color:rgb(155, 173, 173);
+  font-size: 30rpx;
+}
+/*时间*/
+.time-view{
+  float: right;
+  color: rgb(155, 173, 173);
+  font-size: 28rpx;
+  margin-right: 20rpx;
+}
+
+.del-part{
+  background-color: orangered;
+  width: 180rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.4s;
+  transform: translateX(180rpx);
+}
+
+.touch-move-active .content-part,
+.touch-move-active .del-part {
+transform: translateX(0);
+}

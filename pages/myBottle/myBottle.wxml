@@ -1,0 +1,38 @@
+<!--pages/piaoliuping/myBottle/myBottle.wxml-->
+<view>
+  <view wx:for="{{bottleList}}" wx:for-item='item' wx:for-index="index"
+  class="bottle-list-item {{item.isTouchMove ? 'touch-move-active' : 'no-d'}}" data-bottleindex="{{index}}" 
+  bindtouchstart="touchstart" bindtouchmove="touchmove" bindtap="switchToLiaoTianPage" 
+  data-bottleid="{{item.objectId}}">
+      <view class="content-part">
+        <image src="{{item.senderAvatar}}" class="cell-profile-image"></image>
+        <view class="inline-block-view">
+          <view class="cell-user-name">{{item.senderName}}</view>
+          <view class="cell-content">{{item.content}}</view>
+        </view>
+        <view class="time-view">{{item.updatedAt}}</view>
+      </view>
+      <view class="del-part" catch:tap="showDeleteModal"
+      data-bottleid="{{item.objectId}}" 
+      data-type='del'>删除</view>
+  </view>
+
+  <view wx:for="{{conversationList}}" wx:for-item='item' wx:for-index="index"
+  class="bottle-list-item {{item.isTouchMove ? 'touch-move-active' : 'no-d'}}" data-conversationindex="{{index}}" 
+  bindtouchstart="touchstart" bindtouchmove="touchmove" bindtap="switchToLiaoTianPage" 
+  data-conversationid="{{item.id}}">
+      <view class="content-part">
+        <image src="{{item.userAvatar}}" 
+        class="cell-profile-image"></image>
+        <view class="inline-block-view">
+          <view class="cell-user-name">
+          {{item.userName}}</view>
+          <view class="cell-content">{{item.content}}</view>
+        </view>
+        <view class="time-view">{{item.updatedAt}}</view>
+      </view>
+      <view class="del-part" catch:tap="showDeleteModal"
+      data-conversationid="{{item.id}}" 
+      data-type='del'>删除</view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<!--component/customeScrollViewWidget/customeScrollViewWidget.wxml-->
+<scroll-view scroll-y bindscrolltoupper="getHistoryChat" 
+scroll-into-view="{{chatList[chatList.length - 1].scrollId}}" scroll-with-animation
+style="height: {{swiperHeight}}px; background-color: #eee">
+  <view class="chat-item" wx:for="{{chatList}}" wx:for-item="item" id="{{item.scrollId}}">
+    <view class="time-tip-view"></view>
+    <view wx:if="{{item.role == 'other'}}" class="left-chat-content-view">
+      <image src="{{item.avatar}}" class="user-avatar"></image>
+      <view wx:if="{{item.type == 'text'}}" class="other-text-view">{{item.content}}</view>
+      <view wx:elif="{{item.type == 'picture'}}" class="picture-view">
+        <image src="{{item.path}}" bindtap="viewFullPicture" mode="aspectFit" data-path="{{item.path}}"></image>
+      </view>
+      <view wx:elif="{{item.type == 'voice'}}" class="other-voice-view">
+        <image src="{{voiceIcon}}" bindtap="playVoice" data-path="{{item.path}}" ></image>
+      </view>
+    </view>
+    <view wx:else class="right-chat-content-view">
+      <view wx:if="{{item.type == 'text'}}" class="self-text-view">{{item.content}}</view>
+      <view wx:elif="{{item.type == 'picture'}}" class="picture-view">
+        <image src="{{item.path}}" bindtap="viewFullPicture" mode="aspectFit" data-path="{{item.path}}"></image>
+      </view>
+      <view wx:elif="{{item.type == 'voice'}}" class="self-voice-view">
+        <image src="{{voiceIcon}}" bindtap="playVoice" data-path="{{item.path}}"></image>
+      </view>
+      <image src="{{item.avatar}}" class="user-avatar"></image>
+    </view>
+  </view>
+</scroll-view>

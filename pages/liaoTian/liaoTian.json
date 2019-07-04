@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "customeSessionWidget": "../../component/customeSessionWidget/customeSessionWidget",
+    "customeScrollViewWidget": "../../component/customeScrollViewWidget/customeScrollViewWidget"
+  }
+}

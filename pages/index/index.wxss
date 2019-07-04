@@ -1,0 +1,73 @@
+/* pages/piaoliuping/piaoliuping.wxss */
+page{
+  height: 100%;
+}
+
+.caozuo-view{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 100rpx;
+  left: 40rpx;
+  right: 40rpx;
+  background-color: rgb(56, 102, 170);
+  color: #fff;
+  font-size: 28rpx;
+  padding: 20rpx;
+  border-radius: 30rpx;
+}
+
+.caozuo-item {
+  text-align: center;
+}
+
+.caozuo-item image{
+  width: 120rpx;
+  height: 120rpx;
+}
+
+/*扔瓶子动画元素*/
+.bottle-view {
+  position: absolute;
+  top: 40%;
+  left: 40%
+}
+
+.bottle-view image{
+  width: 160rpx;
+  height: 160rpx;
+}
+
+/*捞瓶子动画元素*/
+.yuwang-view {
+  position: absolute;
+  top: 50%;
+  left: 40%
+}
+
+.yuwang-view image{
+  width: 160rpx;
+  height: 160rpx;
+}
+
+/*捞瓶子动画元素*/
+.yuwang-view {
+  position: absolute;
+  top: 50%;
+  left: 40%
+}
+
+/*捞瓶子的最终结果元素*/
+.result-view {
+  position: absolute;
+  top: 50%;
+  left: 40%
+}
+
+.result-view image{
+  width: 160rpx;
+  height: 160rpx;
+}
+
+

@@ -1,0 +1,104 @@
+/* component/customeScrollViewWidget/customeScrollViewWidget.wxss */
+.chat-item {
+  margin: 30rpx 10rpx;
+}
+
+.time-tip-view {
+
+}
+
+.left-chat-content-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.right-chat-content-view{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.user-avatar {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 5rpx;
+  margin: 0 30rpx;
+}
+
+.other-text-view {
+  position: relative;
+  background-color: #fff;
+  color: #000;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  max-width: 70%;
+  word-wrap:break-word; /*因为数字和字母不会自动换行，导致内容溢出*/
+}
+
+.other-text-view::before, .other-voice-view::before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 16rpx;
+  left: -28rpx;
+  border: solid 14rpx;
+  border-color: #eee #fff #eee #eee;
+}
+
+.self-text-view {
+  position: relative;
+  background-color: #52b061;
+  color: #fff;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  max-width: 70%;
+  word-wrap:break-word;
+}
+
+.self-text-view::before, .self-voice-view::before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 16rpx;
+  right: -28rpx;
+  border: solid 14rpx;
+  border-color: #eee #eee #eee #52b061;
+}
+
+
+.picture-view image{
+  border-radius: 10rpx;
+  background-color: #fff;
+  width: 200px;
+}
+
+.other-voice-view {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10rpx;
+  width: 100rpx;
+  text-align: center;
+}
+
+.other-voice-view image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 10rpx;
+}
+
+.self-voice-view {
+  position: relative;
+  background-color: #52b061;
+  border-radius: 10rpx;
+  width: 100rpx;
+  text-align: center;
+}
+
+.self-voice-view image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 10rpx;
+}

@@ -1,0 +1,17 @@
+<!--component/customeSessionWidget.wxml-->
+  <view class="session-view">
+    <image src="{{selectedInputWay == 1 ? keyboardIcon : voiceIcon}}"  
+    class="iconImage" bindtap="changeInputWay"></image>
+    <view wx:if="{{selectedInputWay == 0}}" class="middle-view">
+      <input style="text-align: left" value="{{inputContent}}"
+      bindinput="changeInputContent" bindconfirm="sendText" confirm-hold></input>
+    </view>
+    <view  wx:else class="middle-view" 
+    bindtouchstart="touchStart" catch:touchmove="touchMove" bindtouchend="touchEnd">{{keyboardTip}}</view>
+    <image src="{{pictureIcon}}"  class="iconImage" bindtap="sendMessage"></image>
+  </view>
+
+  <view class="voice-tip" hidden="{{!showRecordStatusView}}">
+    <view><image src="{{statusIcon}}" ></image></view>
+    <view>{{tip}}</view>
+  </view>

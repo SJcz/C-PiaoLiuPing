@@ -1,0 +1,43 @@
+<!--pages/piaoliuping/piaoliuping.wxml-->
+
+<view wx:if="{{ownUserInfo}}" 
+  style="background-image: url({{backgroundImage}});background-size: 100% 100%; height: 100%">
+  <view class="caozuo-view">
+    <view class="caozuo-item" bindtap="showThrowBottleModal">
+      <image src="{{throwOneIcon}}"></image>
+      <view>扔一个</view>
+    </view>
+    <view class="caozuo-item">
+      <image src="{{fishOneIcon}}" bindtap="showYuWangAnimationView"></image>
+      <view>捞一个</view>
+    </view>
+    <view class="caozuo-item" bindtap='switchToMyBottlePage'>
+      <image src="{{myBottleIcon}}"></image>
+      <view>我的瓶子</view>
+    </view>
+  </view>
+
+  <modal hidden="{{isHideThrowBottleModal}}" title="" confirm-text="扔出" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" no-cancel="{{false}}">
+    <textarea placeholder='请输入内容' value="{{inputContent}}" style="height:350rpx" 
+    bindinput='inputTextarea'></textarea>
+  </modal>
+
+  <view animation="{{bottleAnimation}}" hidden="{{isHideBottleAnimationView}}" class="bottle-view" >
+    <image src="{{bottlePicture}}">
+    </image>
+  </view>
+
+  <view animation="{{yuwangAnimation}}" hidden="{{isHideYWAnimationView}}" class="yuwang-view">
+    <image src="{{yuwangPicture}}">
+    </image>
+  </view>
+
+  <view hidden="{{isHideResultView}}" class="result-view" bindtap="openBottle">
+    <image src="{{fishBottleResultUrl}}">
+    </image>
+  </view>
+</view>
+<view wx:else >
+  <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="primary" 
+  style="margin: 600rpx 100rpx 400rpx 100rpx;">授权获取用户信息</button>
+</view>

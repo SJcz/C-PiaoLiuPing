@@ -1,0 +1,5 @@
+<!--pages/liaoTian/liaoTian.wxml-->
+<view>
+  <customeScrollViewWidget chatList="{{chatList}}" swiperHeight="{{swiperHeight}}"></customeScrollViewWidget>
+  <customeSessionWidget bindsend="send" id="sessionWidget"></customeSessionWidget>
+</view>
